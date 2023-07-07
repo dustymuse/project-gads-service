@@ -1152,6 +1152,9 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.section_name_social-networks .section__inner-structure .section__image {
+  max-width: 100%;
+}
 .section_name_social-networks .section__inner-structure .section__title {
   margin-bottom: 40px;
   text-align: left;
