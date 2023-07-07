@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;900&display=swap');
+@import '../vars';
+@import '../template';
+@import './Page5_SMM_Header-vars';
+@import '../template_header';
+@import '../form';
+@import '../template_footer';
+
+
+// СММ / Ведение социальных сетей Блок 2
+
+.section_name_social-networks {
+    background-image: url(../../assets/img/template/light-blue-bg.svg);
+
+    .section__inner-structure {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        align-items: center;
+
+        @media (max-width:$l) {
+            column-gap: 20px;
+        }
+
+        @media (max-width:$s) {
+            grid-template-columns: 1fr;
+        }
+
+        .section__title {
+            margin-bottom: 40px;
+            text-align: left;
+
+            @media (max-width:$l) {
+                margin-bottom: 24px;
+            }
+
+            @media (max-width:$s) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .section__text {
+            margin-bottom: 40px;
+            text-align: left;
+
+            @media (max-width:$l) {
+                margin-bottom: 24px;
+            }
+
+            @media (max-width:$s) {
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+        }
+
+        .section__infoblock {
+            padding: 30px;
+            background-color: $bg_light-beige;
+
+            @media (max-width:$l) {
+                padding: 16px;
+            }
+
+            .infoblock__icon {
+                width: 75px;
+                height: 86px;
+                margin-top: 10px;
+                align-self: flex-start;
+            }
+
+            .infoblock__text {
+                @media (max-width:$l) {
+                    font-size: 20px;
+                }
+
+                @media (max-width:$m) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+//section content plan
+
+.section_name_content-plan {
+
+    .section__table {
+
+        @media (max-width:$m) {
+            display: none;
+        }
+    }
+
+    .section__table_mobile {
+        @media (max-width:$m) {
+            display: table;
+        }
+    }
+}
+
+.table_section_content-plan {
+
+    @media (max-width:$s) {
+        border-radius: 0;
+    }
+
+    .table__row:nth-of-type(2n),
+    .table__row_style_dark {
+        background-color: $lightgrey_basic;
+        background-image: none;
+    }
+
+    .table__cell:not(.table__cell_head) {
+        padding-top: 12px;
+    }
+
+    .table__cell {
+        @media (max-width:$l) {
+            padding-left: 10px;
+        }
+
+        @media (max-width:$m) {
+            padding: 15px 20px 20px 15px;
+        }
+    }
+
+    .table__cell-text {
+        margin: 4px 0;
+    }
+
+    .table__cell-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+
+        @media (max-width:$s) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .table__cell-grid-item:last-of-type {
+            grid-column: 1/-1;
+        }
+    }
+}
+
+//section communication structure
+
+.section_name_communication {
+    background-color: $lightgrey_basic;
+    background-image: url(../../assets/img/template/light-blue-bg.svg);
+}
+
+.table_section_communication .table__cell {
+
+    @media (max-width:$l) {
+        padding: 20px 10px;
+    }
+
+    @media (max-width:$m) {
+        padding-right: 0;
+    }
+
+    @media (max-width:$s) {
+        padding: 10px 16px;
+    }
+}
+
+
+
+
+.section_name_advertising-goals {
+    background-color: $lightgrey_basic;
+    background-image: url(../../assets/img/template/light-blue-bg.svg);
+
+    .section__text {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 920px;
+
+        @media (max-width:$l) {
+            max-width: none;
+        }
+    }
+}
+
+.section_name_cost-of-services {
+    background-color: $lightgrey_basic;
+    background-image: url(../../assets/img/template/light-blue-bg.svg);
+
+    .section__title {
+        margin-bottom: 60px;
+
+        @media (max-width:$l) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width:$m) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.section_name_cost-of-services .section__infoblock {
+    margin-top: 60px;
+
+    @media (max-width:$l) {
+        margin-top: 40px;
+    }
+
+    @media (max-width:$m) {
+        margin-top: 32px;
+    }
+}
