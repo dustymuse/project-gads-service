@@ -1473,4 +1473,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 129px;
   gap: 10px;
+}
+
+.infoblock_section_cost-of-service {
+  background-image: none;
+  background-color: #EDF4FA;
 }/*# sourceMappingURL=Page6_GoogleAds_Style.css.map */
