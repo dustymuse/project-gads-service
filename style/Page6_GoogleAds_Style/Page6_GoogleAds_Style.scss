@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;900&display=swap');
+@import '../vars';
+@import '../template';
+@import './Page6_GoogleAds_Header-vars';
+@import '../template_header';
+@import '../form';
+@import '../template_footer';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    // border: 1px solid
+}
+
+// <!-- 3й блок_Кому мы показываем -->
+.container {
+    max-width: $container-xl;
+    margin: 0 auto;
+
+    @media (max-width:$l) {
+        max-width: $container-l;
+    }
+
+    @media (max-width: $m) {
+        max-width: $container-m;
+    }
+
+    @media (max-width: $s) {
+        max-width: $container-s;
+    }
+}
+
+.show-ad__container {
+    min-height: 496px;
+    height: 100%;
+    text-align: center;
+    padding: 80px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+        font-family: $font;
+        font-size: 38px;
+        font-weight: 900;
+        color: $purple_basic;
+        margin-bottom: 55px;
+    }
+
+    p {
+        font-family: $font;
+        font-size: 20px;
+        font-weight: 700;
+        color: $purple_basic;
+    }
+
+    @media (max-width:$l) {
+        max-width: $container-l;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        ;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: $m) {
+        max-width: $container-m;
+    }
+
+    @media (max-width: $s) {
+        max-width: $container-s;
+        padding: 40px 0;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        p {
+            line-height: 24px;
+        }
+    }
+}
+
+.show-ad__show-items {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $s) {
+        flex-wrap: wrap;
+    }
+
+    flex-grow: 1;
+    align-content: space-between;
+}
+
+.show-item {
+    width: 320px;
+
+    @media (max-width:$l) {
+        width: 221px;
+    }
+
+    @media (max-width:$m) {
+        width: 157px;
+    }
+
+    @media (max-width: $s) {
+        width: 139px;
+    }
+
+    img {
+        height: 120px;
+
+        @media (max-width: $s) {
+            height: 60px;
+        }
+    }
+}
+
+// <!-- 3й блок_Кому мы показываем -->
+
+// 4й блок Стоимость услуг
+
+.section_name_gads-cost-of-service {
+    background-image: url(../../assets/img/template/background-graph-paper.jpg);
+
+    .section__title {
+        margin-bottom: 60px;
+
+        @media (max-width:$l) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width:$m) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .section__grid-table {
+        margin-bottom: 60px;
+
+        @media (max-width:$l) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width:$m) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .grid-table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 40px;
+        font-family: $font;
+        color: $purple_basic;
+
+        @media (max-width:$l) {
+            column-gap: 20px
+        }
+
+        @media (max-width:$s) {
+            grid-template-columns: 1fr;
+            display: none;
+        }
+
+        .grid-table__column {
+            position: relative;
+            display: grid;
+            padding: 40px;
+            grid-template-rows: 122px repeat(11, 52px);
+            align-items: stretch;
+
+            @media (max-width:$l) {
+                padding: 40px 20px 20px;
+                grid-template-rows: 98px repeat(11, 48px);
+            }
+
+            @media (max-width:$m) {
+                grid-template-rows: 122px 72px 48px 72px repeat(5, 48px) 72px 48px 48px;
+            }
+
+            @media (max-width:$s) {
+                padding: 20px;
+                grid-template-rows: 95px repeat(11, 44px);
+            }
+
+            .grid-table__bookmark {
+                width: 52px;
+                height: 64px;
+                position: absolute;
+                right: 40px;
+                top: -5px;
+                background-color: $dark_secondary;
+                border-radius: 2px 2px 12px 12px;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                @media (max-width:$m) {
+                    height: 44px;
+                    right: 20px;
+                }
+            }
+
+
+            .grid-table__bookmark_business_small {
+                background-image: url(../../assets/img/Page6_GoogleAds_img/icons/24-basic-case.svg);
+            }
+
+            .grid-table__bookmark_business_medium {
+                background-image: url(../../assets/img/Page6_GoogleAds_img/icons/24-two-cases.svg);
+            }
+
+            .grid-table__column-title {
+                margin-bottom: 12px;
+                font-size: 26px;
+
+                @media (max-width:$l) {
+                    margin-bottom: 8px;
+                    font-size: 18px;
+                }
+            }
+
+            .grid-table__text,
+            .grid-table__item {
+                font-size: 20px;
+
+                @media (max-width:$l) {
+                    font-size: 16px;
+                }
+            }
+
+            .grid-table__item {
+                display: flex;
+                align-items: center;
+                padding: 0 3px 0 20px;
+                border-bottom: solid 1px $dark_secondary;
+
+                @media (max-width:$m) {
+                    padding-left: 10px;
+                }
+            }
+
+            .grid-table__column-header {
+                border-bottom: solid 1px $dark_secondary;
+            }
+
+            .grid-table__item_value_true {
+                background-image: url(../../assets/img/Page6_GoogleAds_img/icons/24-basic-circle-checked.svg);
+                background-size: 24px;
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: 20px;
+            }
+
+            .grid-table__item_value_false {
+                background-image: url(../../assets/img/Page6_GoogleAds_img/icons/24-basic-circle-x.svg);
+                background-size: 24px;
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: 20px;
+            }
+
+            .grid-table__button {
+                margin-top: 20px;
+                width: 238px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                border-radius: 12px;
+                background-color: $bright_basic;
+                font-size: 16px;
+                color: $dark_basic;
+                font-weight: 700;
+
+                @media (max-width:$l) {
+                    width: auto;
+                }
+
+                @media (max-width:$s) {
+                    height: 48px;
+                }
+            }
+        }
+
+
+        .grid-table__column_options {
+            padding: 40px 0;
+            font-weight: 700;
+
+            .grid-table__item:nth-of-type(2n+3) {
+                background-color: $dark_basic;
+            }
+        }
+
+        .grid-table__column:not(.grid-table__column_options) {
+            padding: 40px;
+            border: 1px solid $dark_secondary;
+            border-radius: 12px;
+            background-color: $dark_basic;
+
+            @media (max-width:$l) {
+                padding: 40px 20px 20px;
+            }
+
+            @media (max-width:$s) {
+                padding: 20px;
+            }
+
+            .grid-table__item:nth-of-type(2n+1) {
+                background-color: $lightgrey_basic;
+            }
+        }
+    }
+
+    .grid-table_mobile {
+        display: none;
+
+        @media (max-width:$s) {
+            display: grid;
+        }
+
+        .grid-table__column:first-of-type {
+            margin-bottom: 10px;
+        }
+
+        .grid-table__column {
+            .grid-table__column-title {
+                font-size: 18px;
+            }
+
+            .grid-table__text {
+                font-size: 16px;
+            }
+
+            .grid-table__item {
+                padding-right: 131px;
+                font-size: 12px;
+                font-weight: 700;
+                background-position-x: 160px;
+            }
+
+            .grid-table__item-value {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            .grid-table__item_complex {
+                padding-right: 0;
+                display: grid;
+                grid-template-columns: 1fr 129px;
+                gap: 10px;
+            }
+        }
+
+    }
+}
+
+// конец 4й блок стоимость услуг
